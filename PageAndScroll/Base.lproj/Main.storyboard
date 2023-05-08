@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PageAndScroll" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="tCD-Jf-jZz">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7BY-AV-LWK">
+                                        <rect key="frame" x="0.0" y="0.0" width="1572" height="759"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="皮卡丘" translatesAutoresizingMaskIntoConstraints="NO" id="2Hb-WB-Wow">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="達羅特" translatesAutoresizingMaskIntoConstraints="NO" id="OT2-99-LLc">
+                                                <rect key="frame" x="393" y="0.0" width="393" height="759"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="銀河" translatesAutoresizingMaskIntoConstraints="NO" id="jRs-Vn-a7Z">
+                                                <rect key="frame" x="786" y="0.0" width="393" height="759"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="小貓" translatesAutoresizingMaskIntoConstraints="NO" id="GGw-J8-oST">
+                                                <rect key="frame" x="1179" y="0.0" width="393" height="759"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7BY-AV-LWK" firstAttribute="trailing" secondItem="aCh-MD-9Ft" secondAttribute="trailing" id="8aJ-b2-qfz"/>
+                                    <constraint firstItem="7BY-AV-LWK" firstAttribute="bottom" secondItem="aCh-MD-9Ft" secondAttribute="bottom" id="9q5-cR-h0Q"/>
+                                    <constraint firstItem="2Hb-WB-Wow" firstAttribute="height" secondItem="XfE-cO-2Ka" secondAttribute="height" id="GM6-Sr-uAE"/>
+                                    <constraint firstItem="7BY-AV-LWK" firstAttribute="leading" secondItem="aCh-MD-9Ft" secondAttribute="leading" id="V1t-Kq-veB"/>
+                                    <constraint firstItem="7BY-AV-LWK" firstAttribute="top" secondItem="aCh-MD-9Ft" secondAttribute="top" id="Zdc-ZX-OCN"/>
+                                    <constraint firstItem="2Hb-WB-Wow" firstAttribute="width" secondItem="XfE-cO-2Ka" secondAttribute="width" id="xvP-IN-oM0"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="aCh-MD-9Ft"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="XfE-cO-2Ka"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zFg-QA-iE5"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="UUu-pz-hYj">
+                                <rect key="frame" x="129.66666666666669" y="752" width="133.66666666666669" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="currentPageIndicatorTintColor" red="0.94948075620000005" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="changePage:" destination="BYZ-38-t0r" eventType="valueChanged" id="mat-rP-Xkq"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tCD-Jf-jZz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3fw-6J-vHE"/>
+                            <constraint firstItem="tCD-Jf-jZz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AMf-N9-wlN"/>
+                            <constraint firstItem="tCD-Jf-jZz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="waz-M6-4Ya"/>
+                            <constraint firstItem="tCD-Jf-jZz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x3O-jF-Te1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="UUu-pz-hYj" id="LNB-VX-Dv0"/>
+                        <outlet property="pageView" destination="8bC-Xf-vdC" id="u7P-fe-pDr"/>
+                        <outlet property="scrollView" destination="tCD-Jf-jZz" id="z8Y-Ot-hKo"/>
+                        <outletCollection property="imageViews" destination="2Hb-WB-Wow" collectionClass="NSMutableArray" id="bT2-mV-ZHh"/>
+                        <outletCollection property="imageViews" destination="OT2-99-LLc" collectionClass="NSMutableArray" id="GhG-OZ-zyQ"/>
+                        <outletCollection property="imageViews" destination="jRs-Vn-a7Z" collectionClass="NSMutableArray" id="r6W-D0-ueh"/>
+                        <outletCollection property="imageViews" destination="GGw-J8-oST" collectionClass="NSMutableArray" id="UhZ-1R-I2V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="21" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="小貓" width="650" height="487"/>
+        <image name="皮卡丘" width="225" height="225"/>
+        <image name="達羅特" width="720" height="904"/>
+        <image name="銀河" width="644" height="436"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
